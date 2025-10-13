@@ -1,0 +1,303 @@
+import DevOnly from "../components/DevOnly";
+
+<DevOnly>[Insert screenshot of reports list view]</DevOnly>
+
+## Overview
+
+Reports allow you to create, publish, and share customizable, presentation-ready pages using the Page Editor. Unlike traditional financial reports, these are professional, branded pages built from content blocks and data, shared as secure, view-only links with delivery analytics.
+
+**Key Benefits**:
+
+- Create polished updates and summaries without exporting PDFs or combining documents.
+- Reuse Page Editor blocks for consistent formatting.
+- Email reports to contacts or lists with tracked engagement.
+
+## Set Up a Report
+
+<DevOnly>[Insert screenshot of new report modal/button]</DevOnly>
+
+To create a report, you must have access to an organization. Follow these steps:
+
+1. Go to **Organization > Reports** (`/[orgId]/reports`).
+2. Click **New Report**.
+   - A draft report opens in the Page Editor.
+   - Optionally, select or create a report group to organize the report.
+3. Enter a **Name** and optional **Description** in the breadcrumb on the report page.
+   - The name becomes the page title and can be edited inline.
+
+**Permissions**:
+
+- Reports are tied to an organization. You need organization access to create or edit reports.
+
+## Use Reports
+
+### View the Reports List
+
+<DevOnly>[Insert screenshot of report groups + table]</DevOnly>
+
+The Reports list displays all reports in your organization, with options to filter by:
+
+- **All**: All reports.
+- **Specific Group**: Reports in a selected group.
+- **Ungrouped**: Reports not assigned to a group.
+
+**Table Columns**:
+
+- **Subject**: Report name and description.
+- **Sent Status/Date**: Indicates if sent and when.
+- **Actions**: Options to edit, move, or send reports.
+
+To create a report, click **New Report** to start a draft in the Page Editor. To move a report to a group, use the table’s context menu.
+
+### Edit a Report
+
+<DevOnly>[Insert screenshot of report builder UI]</DevOnly>
+
+The Page Editor powers report creation with rich text and structured blocks. Key features include:
+
+- **Auto-Save**: Changes save automatically with a short delay. No manual save is needed.
+- **Read-Only After Publish**: Once sent, the report becomes read-only to preserve content for recipients.
+- **Cleanup**: The app removes unused files referenced in the page to optimize storage.
+
+**Supported Blocks and Formatting**:
+
+- Headings and paragraphs
+- Lists (bulleted, numbered, checklists)
+- Links with a floating toolbar
+- Callouts and toggles
+- Code blocks
+- Tables and columns
+- Mentions, suggestions, comments, and basic formatting (bold, italic, underline, code)
+- Table of contents (if enabled in templates)
+- Inline color and formatting tools
+
+**Note**: Features may vary based on configuration or updates.
+
+### Rename a Report
+
+<DevOnly>[Insert screenshot of inline title editing]</DevOnly>
+
+1. Click the report title in the breadcrumb.
+2. Enter a new name and press **Enter** to save.
+   - Names cannot be empty. Invalid names revert with an error message.
+
+### Send a Report
+
+<DevOnly>[Insert screenshot of send report modal]</DevOnly>
+
+To share a report:
+
+1. Open the report and click **Publish & Send** (for drafts) or **Send** (for sent reports).
+2. Choose an option:
+   - **Send a Test**: Sends the report to your verified email for review.
+   - **Send to Recipients**: Select contacts or lists using the Recipients selector. The system merges and deduplicates recipients.
+3. Click **Send Report** to email a secure, view-only link.
+   - On the first send, the report status changes to "sent," and the "Sent at" timestamp is recorded.
+
+**Limits**:
+
+- Maximum 100 recipients per send.
+- Duplicate or previously sent recipients are skipped, with a clear message displayed.
+
+### View Analytics
+
+<DevOnly>[Insert screenshot of report analytics cards + recipient table]</DevOnly>
+
+After sending a report, analytics appear in the report header:
+
+- **Delivered**: Number of emails successfully delivered.
+- **Link Clicked**: Number of recipients who clicked the report link.
+- **Report Viewed**: Number of signed-in recipients who viewed the report.
+
+**Recipient Details**:
+
+- Shows delivery status, email open/click events, and view timestamps (tracked for signed-in users with verified emails matching the recipient list).
+
+**Privacy**:
+
+- Viewing is tracked only for signed-in users with verified emails matching the recipient list.
+
+## Data Blocks and Metrics
+
+<DevOnly>[Insert screenshot of data blocks in Page Editor]</DevOnly>
+
+Data blocks enhance reports by embedding dynamic financial and operational metrics directly in the Page Editor. These blocks pull live data from connected sources, such as accounting platforms (e.g., QuickBooks), to create insightful, professional visuals and summaries.
+
+### Available Now: Benchmarks Block
+
+The Benchmarks block compares a unit's financial <Tooltip tip="Key performance indicators combining multiple financial measures">KPIs</Tooltip> against peer benchmarks across your accessible units for a selected time period.
+
+**At a glance**:
+
+- Contrast a unit's KPIs with peer averages for any selected month or quarter, with variance callouts for fast review.
+- Pull consolidated per-unit metrics directly from connected accounting platforms like QuickBooks.
+- Add the Benchmarks block in the Page Editor, choose the period, scope, and KPIs, then publish.
+- Share the rendered comparison table or list so teams can spot over- or under-performance in context.
+
+### Coming Soon: Additional Data Blocks
+
+<Update label="Data blocks roadmap" description="In development">
+  Additional data blocks will soon extend the Page Editor so you can spotlight live metrics in different formats.
+
+<AccordionGroup>
+  <Accordion title="Financial Trends">
+    Financial Trends blocks cover charts and tables, letting you plot KPI trends or publish sortable
+    statements from the Benchmarks pipeline with configurable layouts and ranges.
+  </Accordion>
+  <Accordion title="Scorecards">
+    Scorecards surface snapshot KPIs such as revenue or EBITDA with optional prior-period comparisons so
+    readers see at-a-glance trends.
+  </Accordion>
+  <Accordion title="Bank Feeds">
+    Bank Feeds summarize inflows, outflows, and balances from connected accounts; select the account and date
+    range to add current cash context.
+  </Accordion>
+  <Accordion title="Form Submissions">
+    Form Submissions report totals or statuses from internal forms, letting you display counts like quarterly
+    marketing leads for a chosen date range.
+  </Accordion>
+</AccordionGroup>
+
+</Update>
+
+## Organize Reports with Report Groups
+
+<DevOnly>[Insert screenshot of groups sidebar]</DevOnly>
+
+Report groups help you categorize and manage reports for better organization (e.g., "Monthly Updates" or "Board Packets"). Groups act like folders, allowing you to sort, filter, and find reports quickly.
+
+**Create a Group**:
+
+1. Go to **Organization > Reports** (`/[orgId]/reports`).
+2. In the left sidebar, click **New Group**.
+3. Enter a group name (e.g., "Quarterly Reports") and press **Enter**.
+   - Names cannot be empty. Invalid names revert with an error message.
+
+**Add Reports to a Group**:
+
+1. When creating a report, select an existing group in the **New Report** modal.
+   - The report is automatically filed into the chosen group.
+2. For existing reports:
+   - In the Reports list, use the table’s context menu to select **Move to Group** and choose a group.
+   - Alternatively, drag and drop reports into a group in the sidebar.
+
+<Update label="Report Templates" description="Coming soon">
+  ## Report Templates
+
+{" "}
+
+<DevOnly>[Insert screenshot of report templates UI]</DevOnly>
+
+{" "}
+
+<Tooltip tip="Reusable layouts that pre-fill content and data for new reports">Report templates</Tooltip> will
+allow you to generate reports quickly by pulling in live data and applying predefined layouts. Templates streamline
+repetitive reporting tasks and ensure consistency.
+
+**Key Features**:
+
+- **Live Data Integration**: Connect templates to data sources to populate reports with real-time information.
+- **Pre-Set Contact Lists**: Assign a default contact list to a template for automatic recipient selection.
+- **Customizable Layouts**: Use the Page Editor to design templates with reusable blocks and formatting.
+- **Quick Generation**: Create a new report from a template with one click, pre-filled with data and recipients.
+
+**How to Use**:
+
+1. Go to **Organization > Reports > Templates** (`/[orgId]/reports/templates`).
+2. Select or create a template.
+3. Configure data sources and a default contact list (optional).
+4. Generate a report from the template, edit as needed, and send.
+
+**Note**: Templates will be available in a future update. Check the product changelog for release details.
+
+</Update>
+
+## Advanced Options
+
+### Draft vs. Sent States
+
+<AccordionGroup>
+  <Accordion title="Draft reports">
+    - Fully editable. - Supports test sends to your email. - Converts to "sent" on the first successful send.
+  </Accordion>
+  <Accordion title="Sent reports">
+    - Read-only to preserve content. - Allows sending to additional recipients. - Displays analytics.
+  </Accordion>
+</AccordionGroup>
+
+### Manage Contacts and Lists
+
+<DevOnly>[Insert screenshot of recipients selector]</DevOnly>
+
+- Use the <Tooltip tip="Search and select contacts or lists stored for the organization">Recipients Multiselect</Tooltip> to choose contacts or lists at `/[orgId]/contacts`.
+- Selecting a list includes all its contacts, with duplicates removed.
+- At least one unique recipient is required.
+
+## Troubleshoot Common Issues
+
+<AccordionGroup>
+  <Accordion title="Can't create a report?">
+    - Verify you have organization access and are on the Reports page (`/[orgId]/reports`). - Confirm the page
+    loads without permission errors before creating drafts.
+  </Accordion>
+  <Accordion title="Send errors or failed recipients">
+    - Check that email addresses are valid and verified. - Reduce recipient count if approaching the
+    100-recipient limit.
+  </Accordion>
+  <Accordion title="Recipient can't access the report">
+    - Ensure their email matches the sent recipient list and is verified. - Ask recipients to sign in with the
+    same email and refresh the secure link.
+  </Accordion>
+  <Accordion title="Analytics not updating">
+    - Allow time for delivery and engagement signals to update, then refresh the page. - Remind viewers that
+    "Viewed" requires a signed-in session with a matching verified email.
+  </Accordion>
+</AccordionGroup>
+
+## Frequently Asked Questions
+
+<AccordionGroup>
+  <Accordion title="Can I edit a sent report?">
+    No, sent reports are read-only to preserve what recipients saw. Create a new report for updates.
+  </Accordion>
+  <Accordion title="Can I resend to the same recipients?">
+    The system prevents resending the same report to the same emails. Create a new report for resending.
+  </Accordion>
+  <Accordion title="What do recipients see?">
+    A secure, view-only link to the report in an email. No editing is required.
+  </Accordion>
+  <Accordion title="How are analytics tracked?">
+    Delivery, open, and click events come from the email provider. "Viewed" is tracked for signed-in
+    recipients.
+  </Accordion>
+</AccordionGroup>
+
+<DevOnly>
+Glossary
+
+- **Report**: A shareable, view-only page created in the Page Editor.
+- **Page Editor**: The rich text editor for building report content with blocks.
+- **Group**: A folder-like label for organizing reports.
+- **Recipients**: Contacts or lists selected to receive a report via email.
+- **Analytics**: Metrics on delivery and engagement (delivered, opened, clicked, viewed).
+- **Template**: A predefined report layout with optional live data and contact lists (coming soon).
+
+Appendix: Feature Scope Notes (Internal)
+
+- **Data Model**:
+  - `reports`: Reference a `page`, `organizationId`, optional `groupId`, `status` ("draft" or "sent"), `sentAt`, `sentByUserId`.
+  - `reportGroups`: Belong to an `organizationId`.
+  - `reportRecipients`: Track each send with `emailAddress`, `emailId`, and event timestamps (`emailDeliveredAt`, `emailOpenedAt`, `emailClickedAt`, `emailBouncedAt`, `emailComplaintAt`, `emailFailedAt`, `viewedAt`).
+- **Access Control**:
+  - Organization access is required for creating/editing. Verified recipients can view reports via links, contributing to view analytics.
+- **Editor Implementation**:
+  - Report content is stored as a `page` with rich text blocks. Auto-save updates content with debounced writes.
+- **Email Delivery**:
+  - Test sends go to the user’s primary verified email.
+  - Batch sends cap at 100 recipients with deduplication.
+- **Read-Only State**:
+  - Sent reports are locked to ensure content integrity for recipients.
+
+[Insert short video clip of creating, editing, and sending a report]
+
+</DevOnly>

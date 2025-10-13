@@ -1,4 +1,4 @@
-# Mintlify Starter Kit
+# CoverPanda Docs
 
 Use the starter kit to get your docs deployed and ready to customize.
 
