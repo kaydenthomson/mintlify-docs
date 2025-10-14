@@ -1,3 +1,7 @@
+---
+title: Report builder
+---
+
 import DevOnly from "../components/DevOnly";
 
 <DevOnly>[Insert screenshot of reports list view]</DevOnly>
@@ -16,14 +20,18 @@ Reports allow you to create, publish, and share customizable, presentation-ready
 
 <DevOnly>[Insert screenshot of new report modal/button]</DevOnly>
 
-To create a report, you must have access to an organization. Follow these steps:
+To create a report, you must have access to an organization.
 
-1. Go to **Organization > Reports** (`/[orgId]/reports`).
-2. Click **New Report**.
-   - A draft report opens in the Page Editor.
-   - Optionally, select or create a report group to organize the report.
-3. Enter a **Name** and optional **Description** in the breadcrumb on the report page.
-   - The name becomes the page title and can be edited inline.
+<Steps>
+  <Step title="Open Reports">Go to **Organization > Reports**.</Step>
+  <Step title="Start a draft">
+    Click **New Report** to open a draft in the Page Editor. You can optionally choose or create a report
+    group.
+  </Step>
+  <Step title="Name the report">
+    Enter a **Name** and optional **Description** in the breadcrumb; the title updates inline.
+  </Step>
+</Steps>
 
 **Permissions**:
 
@@ -77,22 +85,30 @@ The Page Editor powers report creation with rich text and structured blocks. Key
 
 <DevOnly>[Insert screenshot of inline title editing]</DevOnly>
 
-1. Click the report title in the breadcrumb.
-2. Enter a new name and press **Enter** to save.
-   - Names cannot be empty. Invalid names revert with an error message.
+<Steps>
+  <Step title="Select the title">Click the report name in the breadcrumb to enable inline editing.</Step>
+  <Step title="Save the update">
+    Enter the new name and press **Enter**; invalid entries revert automatically.
+  </Step>
+</Steps>
 
 ### Send a Report
 
 <DevOnly>[Insert screenshot of send report modal]</DevOnly>
 
-To share a report:
-
-1. Open the report and click **Publish & Send** (for drafts) or **Send** (for sent reports).
-2. Choose an option:
-   - **Send a Test**: Sends the report to your verified email for review.
-   - **Send to Recipients**: Select contacts or lists using the Recipients selector. The system merges and deduplicates recipients.
-3. Click **Send Report** to email a secure, view-only link.
-   - On the first send, the report status changes to "sent," and the "Sent at" timestamp is recorded.
+<Steps>
+  <Step title="Choose Send">
+    Open the report and click **Publish & Send** (for drafts) or **Send** (for previously sent reports).
+  </Step>
+  <Step title="Select recipients">
+    Decide between **Send a Test** to yourself or **Send to Recipients** to email contacts and lists;
+    duplicates are automatically removed.
+  </Step>
+  <Step title="Send the report">
+    Click **Send Report** to deliver a secure view-only link. First sends set the status to "sent" and log the
+    timestamp.
+  </Step>
+</Steps>
 
 **Limits**:
 
@@ -168,7 +184,7 @@ Report groups help you categorize and manage reports for better organization (e.
 
 **Create a Group**:
 
-1. Go to **Organization > Reports** (`/[orgId]/reports`).
+1. Go to **Organization > Reports**.
 2. In the left sidebar, click **New Group**.
 3. Enter a group name (e.g., "Quarterly Reports") and press **Enter**.
    - Names cannot be empty. Invalid names revert with an error message.
@@ -184,11 +200,7 @@ Report groups help you categorize and manage reports for better organization (e.
 <Update label="Report Templates" description="Coming soon">
   ## Report Templates
 
-{" "}
-
 <DevOnly>[Insert screenshot of report templates UI]</DevOnly>
-
-{" "}
 
 <Tooltip tip="Reusable layouts that pre-fill content and data for new reports">Report templates</Tooltip> will
 allow you to generate reports quickly by pulling in live data and applying predefined layouts. Templates streamline
@@ -203,7 +215,7 @@ repetitive reporting tasks and ensure consistency.
 
 **How to Use**:
 
-1. Go to **Organization > Reports > Templates** (`/[orgId]/reports/templates`).
+1. Go to **Organization > Reports > Templates**.
 2. Select or create a template.
 3. Configure data sources and a default contact list (optional).
 4. Generate a report from the template, edit as needed, and send.
@@ -218,10 +230,11 @@ repetitive reporting tasks and ensure consistency.
 
 <AccordionGroup>
   <Accordion title="Draft reports">
-    - Fully editable. - Supports test sends to your email. - Converts to "sent" on the first successful send.
+    Draft reports stay fully editable, allow test sends, and switch to "sent" after the first successful
+    delivery.
   </Accordion>
   <Accordion title="Sent reports">
-    - Read-only to preserve content. - Allows sending to additional recipients. - Displays analytics.
+    Sent reports become read-only, still allow additional sends, and display analytics for every recipient.
   </Accordion>
 </AccordionGroup>
 
@@ -229,7 +242,7 @@ repetitive reporting tasks and ensure consistency.
 
 <DevOnly>[Insert screenshot of recipients selector]</DevOnly>
 
-- Use the <Tooltip tip="Search and select contacts or lists stored for the organization">Recipients Multiselect</Tooltip> to choose contacts or lists at `/[orgId]/contacts`.
+- Use the <Tooltip tip="Search and select contacts or lists stored for the organization">Recipients Multiselect</Tooltip> to choose contacts or lists from your directory.
 - Selecting a list includes all its contacts, with duplicates removed.
 - At least one unique recipient is required.
 
@@ -237,20 +250,20 @@ repetitive reporting tasks and ensure consistency.
 
 <AccordionGroup>
   <Accordion title="Can't create a report?">
-    - Verify you have organization access and are on the Reports page (`/[orgId]/reports`). - Confirm the page
-    loads without permission errors before creating drafts.
+    Confirm you have organization access, open the Reports page from the navigation, and resolve any
+    permission errors before drafting.
   </Accordion>
   <Accordion title="Send errors or failed recipients">
-    - Check that email addresses are valid and verified. - Reduce recipient count if approaching the
-    100-recipient limit.
+    Verify recipient emails, ensure they are verified, and trim the list if you approach the 100-recipient
+    cap.
   </Accordion>
   <Accordion title="Recipient can't access the report">
-    - Ensure their email matches the sent recipient list and is verified. - Ask recipients to sign in with the
-    same email and refresh the secure link.
+    Make sure the recipient uses the emailed address, confirm their account is verified, and have them sign in
+    before refreshing the secure link.
   </Accordion>
   <Accordion title="Analytics not updating">
-    - Allow time for delivery and engagement signals to update, then refresh the page. - Remind viewers that
-    "Viewed" requires a signed-in session with a matching verified email.
+    Give delivery and engagement signals a moment to populate, refresh the page, and remind viewers that
+    "Viewed" requires a signed-in, verified email.
   </Accordion>
 </AccordionGroup>
 
@@ -272,8 +285,7 @@ repetitive reporting tasks and ensure consistency.
   </Accordion>
 </AccordionGroup>
 
-<DevOnly>
-Glossary
+## Glossary
 
 - **Report**: A shareable, view-only page created in the Page Editor.
 - **Page Editor**: The rich text editor for building report content with blocks.
@@ -282,7 +294,9 @@ Glossary
 - **Analytics**: Metrics on delivery and engagement (delivered, opened, clicked, viewed).
 - **Template**: A predefined report layout with optional live data and contact lists (coming soon).
 
-Appendix: Feature Scope Notes (Internal)
+<DevOnly>
+
+## Appendix: Feature Scope Notes (Internal)
 
 - **Data Model**:
   - `reports`: Reference a `page`, `organizationId`, optional `groupId`, `status` ("draft" or "sent"), `sentAt`, `sentByUserId`.
@@ -298,6 +312,6 @@ Appendix: Feature Scope Notes (Internal)
 - **Read-Only State**:
   - Sent reports are locked to ensure content integrity for recipients.
 
-[Insert short video clip of creating, editing, and sending a report]
-
 </DevOnly>
+
+<DevOnly>[Insert short video clip of creating, editing, and sending a report]</DevOnly>

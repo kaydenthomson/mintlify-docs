@@ -7,7 +7,7 @@
     "light": "#07C983",
     "dark": "#15803D"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/favicon.ico",
   "navigation": {
     "tabs": [
       {
@@ -15,11 +15,34 @@
         "groups": [
           {
             "group": "Getting started",
-            "pages": ["index", "quickstart"]
+            "pages": ["index", "key-concepts"]
           },
           {
             "group": "Platform",
-            "pages": ["platform/reports"]
+            "pages": [
+              "platform/units",
+              "platform/financials",
+              "platform/metrics",
+              "platform/benchmarks",
+              "platform/scorecards",
+              "platform/reports",
+              "platform/rooms",
+              "platform/forms",
+              "platform/files",
+              "platform/doc-editor",
+              "platform/content-library",
+              "platform/ai"
+            ]
+          },
+          {
+            "group": "Integrations",
+            "pages": [
+              "integrations/accounting",
+              "integrations/banking",
+              "integrations/pos",
+              "integrations/payroll",
+              "integrations/storage"
+            ]
           }
         ]
       }

@@ -1,0 +1,247 @@
+---
+title: Financials
+description: View, build, and consolidate financial reports across units using accounting, banking, and POS data with accurate rollups and benchmarks.
+---
+
+## What You Can Do
+
+- **View Standard Reports**: Access Profit & Loss (P&L), Balance Sheet, and Cash Flow statements.
+- **Build Custom Reports**: Use the **Reports Builder** to create tailored financial views with metrics, tables, and charts.
+- **Consolidate Data**: Roll up financials for specific units, brands, or the entire organization.
+- **Integrate Data Sources**: Combine accounting (e.g., QuickBooks), banking (e.g., Plaid), and POS data.
+- **Share Insights**: Export reports as spreadsheets or share secure, view-only links with stakeholders.
+
+## Data sources
+
+Coverpanda integrates multiple data sources to provide comprehensive financial insights.
+
+<Cards>
+  <Card title="Accounting (QuickBooks)" icon="book-open">
+    Imports P&L and Balance Sheet by period and standardizes your chart of accounts for cross-unit
+    comparisons.
+  </Card>
+  <Card title="Banking (Plaid)" icon="credit-card">
+    Syncs balances and transactions to validate cash positions and inflows/outflows.
+  </Card>
+  <Card title="Point of sale (POS)" icon="barcode">
+    Pulls sales and refunds to compare against deposits and recognized revenue.
+  </Card>
+</Cards>
+
+### Accounting (QuickBooks)
+
+- Imports period-based statements (P&L, Balance Sheet).
+- Standardizes chart of accounts for consistent cross-unit comparisons.
+- Supports unit-level connections and organization-wide rollups.
+
+### Banking (Plaid)
+
+- Securely links bank accounts per unit.
+- Syncs transactions and balances to validate cash positions and inflows/outflows.
+- Enables cash trend tracking and reconciliation alongside accounting data.
+
+### Point of Sale (POS)
+
+- Integrates sales and operational data into financial reports.
+- Compares sales trends with bank deposits and accounting revenue.
+- Currently supports Square, with more POS systems planned.
+
+<Steps>
+  <Step title="Open integrations">Go to **Settings > Integrations**.</Step>
+  <Step title="Connect sources">
+    Select **QuickBooks**, **Plaid**, and optionally **Square**, then authenticate.
+  </Step>
+  <Step title="Verify sync">Confirm each connection shows a recent sync and no errors.</Step>
+</Steps>
+
+<Tip>
+  QuickBooks alone enables financial reporting. Adding banking and POS strengthens variance analysis and cash
+  validation.
+</Tip>
+
+## Financial statements
+
+View standard financial reports to monitor performance.
+
+### Profit & Loss (P&L)
+
+- Tracks Revenue, Cost of Goods Sold (COGS), Gross Profit, Operating Expenses, and Net Income.
+- Filter by unit, brand, or organization and select a period (e.g., month, quarter, year).
+
+### Balance sheet
+
+- Displays Assets, Liabilities, and Equity at a specific point in time.
+- Aligns with P&L period selection for consistent analysis.
+
+### Cash flow (optional)
+
+- Summarizes cash movements derived from accounting data, if enabled.
+
+<Callout>Download P&L or Balance Sheet as spreadsheets from the report view.</Callout>
+
+## Reports builder
+
+Use the **Reports builder** to create custom reports with metrics, tables, and charts. For a deeper overview, see the **Reports** page: [Reports](./reports.mdx).
+
+## Consolidations and rollups
+
+Aggregate financial data across units for unified insights.
+
+**Features**:
+
+- **Scope**: Select one unit, multiple units, or all units in the organization.
+- **Standardized metrics**: Use consistent naming and matching rules to align categories across units.
+- **Data accuracy**: Exclude units without data for the selected period to avoid skewed averages.
+- **Time comparisons**: View current period, prior month, or year-over-year data.
+
+**Tip**: Brand workspaces emphasize cross-operator rollups, while Operator workspaces focus on portfolio performance.
+
+## Benchmarking and comparisons
+
+Compare performance across units or against benchmarks.
+
+### Side-by-side comparisons
+
+- Display multiple units in one view with consistent metrics and statement sections.
+- Toggle between absolute values (e.g., Revenue) and percentages (e.g., Gross Margin %).
+- Apply filters (e.g., brand, region) and sort by KPIs to identify outliers.
+
+### Financial benchmarking
+
+- Set benchmarks (e.g., top quartile Gross Margin %, labor % targets).
+- Compare units against benchmarks, highlighting deltas and trends.
+- Exclude units without data to ensure accurate aggregations.
+
+**Example**: Compare a store’s Gross Margin % (45%) against the top quartile benchmark (50%) to identify underperformance.
+
+## Balance monitoring
+
+Track cash and key balances with integrated data.
+
+**Features**:
+
+- **Cash position**: Compare accounting cash balances with real-time bank balances (Plaid).
+- **Movement signals**: Detect unusual inflows/outflows or missing deposits.
+- **Connection health**: Monitor bank sync status and last sync dates.
+
+**Use Case**: Validate a unit’s cash balance in QuickBooks against Plaid data to spot reconciliation issues.
+
+## Debt schedules (coming soon)
+
+Track loans and obligations within financial reports.
+
+**Planned features**:
+
+- Record principal, interest, maturity, and payment schedules.
+- Display upcoming payments and covenant metrics in reports.
+- Include debt balances and amortization in consolidated views.
+
+## Expense tracking (coming soon)
+
+Gain deeper visibility into spending patterns.
+
+**Planned features**:
+
+- View category-level trends with alerts for unusual spikes.
+- Summarize vendor-level spending across units.
+- Link POS categories, accounting lines, and bank transactions for accuracy.
+
+## Metrics
+
+Metrics standardize key numbers for consistent tracking across units and periods.
+
+**Types**:
+
+- **QuickBooks-sourced**: Metrics like Revenue, COGS, or Payroll from standard reports.
+- **Formula metrics**: Calculated values (e.g., Gross margin = Gross profit / Revenue).
+- **Future sources**: POS and bank-derived metrics (e.g., deposit coverage ratio, same-store sales).
+
+**Configuration**:
+
+<Steps>
+  <Step title="Open metrics">Go to **Settings > Metrics**.</Step>
+  <Step title="Define and match">Create metrics and choose matching strategies (e.g., name or group).</Step>
+  <Step title="Set behavior">
+    Choose frequency (monthly), format (currency/percent), and aggregation rules.
+  </Step>
+</Steps>
+
+**Features**:
+
+- Ensure accurate rollups by excluding units without data for the period.
+- Use metrics in **Reports Builder** for dashboards and comparisons.
+
+**Example**: Define a “Revenue” metric to track monthly sales across all units.
+
+## Banking and POS overlays
+
+Enhance financial reports with banking and POS data.
+
+### Banking (Plaid)
+
+- Display bank balances and transaction summaries alongside accounting KPIs.
+- Identify timing differences (e.g., deposits vs. recognized revenue).
+- Monitor connection health to resolve sync issues.
+
+### POS
+
+- Compare POS sales and refunds with accounting revenue and bank deposits.
+- Detect mapping gaps or timing issues (e.g., batched deposits, processor delays).
+
+**Use Case**: Spot a discrepancy between POS sales ($10k) and bank deposits ($9k) due to processing delays.
+
+## Access and permissions
+
+Control who sees financial data.
+
+- **Organization-Level**: Restrict access to authorized users for specific units or reports.
+- **Unit-Level**: Limit sensitive financials to permitted team members.
+- **Exports**: Downloaded reports respect the user’s access level.
+
+**How to manage**:
+
+<Steps>
+  <Step title="Open members">Go to **Settings > Members**.</Step>
+  <Step title="Assign roles">Grant unit-level access and organization roles.</Step>
+  <Step title="Review regularly">Audit access on a cadence to maintain security.</Step>
+</Steps>
+
+## Exports and sharing
+
+Share financial insights with stakeholders.
+
+- **Spreadsheet Exports**: Download P&L or Balance Sheet for a selected period.
+- **Secure Links**: Share reports with specific units and date ranges as view-only links.
+
+**How to share**:
+
+<Steps>
+  <Step title="Open a report">In **Reports builder**, open the report you want to share.</Step>
+  <Step title="Export or share">
+    Click **Export** for spreadsheets or **Share** for a secure, view-only link.
+  </Step>
+</Steps>
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Missing unit data">
+    Verify the unit’s QuickBooks connection is active and that the selected period has posted data.
+  </Accordion>
+  <Accordion title="Bank or POS variances">
+    Check bank connection status and last sync date in **Settings > Integrations**. Review POS mappings for
+    timing or batching issues.
+  </Accordion>
+  <Accordion title="Permissions issues">
+    Ask an org admin to grant the required unit or organization access.
+  </Accordion>
+  <Accordion title="Metrics not displaying">
+    Confirm metric definitions and data source connections in **Settings > Metrics**.
+  </Accordion>
+</AccordionGroup>
+
+## Next steps
+
+- Connect data sources in **Settings > Integrations**.
+- Build a report with [Reports](./reports.mdx).
+- Define KPIs in **Settings > Metrics**.
