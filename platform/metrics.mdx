@@ -1,7 +1,56 @@
 ---
 title: Metrics
-description: Define and standardize KPIs for use across reports and rollups. Coming soon.
+description: Define standardized KPIs once and use them in Benchmarks, Scorecards, and Reports.
 ---
 
-<Warning>Docs coming soon</Warning>
+import DevOnly from "../components/DevOnly";
+
+## Overview
+
+Metrics normalize key values (e.g., Revenue, Gross Profit, Net Income) across units and periods. Two types are supported:
+
+- QuickBooks metrics: Extract values from Profit & Loss or Balance Sheet
+- Formula metrics: Combine other metrics with equations
+
+Use metrics in Benchmarks, Scorecards, and custom reports.
+
+## Create a QuickBooks metric
+
+<DevOnly>[Insert Screenshot of New Metric (QuickBooks)]</DevOnly>
+
+<Steps>
+  <Step title="Open Metrics settings">Go to **Settings > Metrics**.</Step>
+  <Step title="Add metric">Choose **QuickBooks** and name your metric (e.g., Total Income).</Step>
+  <Step title="Match value">Pick the report and matching strategy:
+  - exact: match a row by name
+  - sectionTotal: use the section summary (e.g., Gross Profit)
+  - groupSummary: use a group’s summary row
+  Provide the matching value (name or section).</Step>
+</Steps>
+
+Notes:
+
+- Frequency is monthly; units and formats are fixed for QuickBooks metrics
+- Only units with connected QuickBooks data are included
+
+## Create a formula metric
+
+<DevOnly>[Insert Screenshot of New Metric (Formula)]</DevOnly>
+
+<Steps>
+  <Step title="Add metric">Choose **Formula**, then define the equation.</Step>
+  <Step title="Reference metrics">Use IDs from existing metrics as variables.</Step>
+  <Step title="Set display">Choose unit (number, currency, percent) and format.</Step>
+</Steps>
+
+Tips:
+
+- Avoid circular references; the app guards against loops
+- Stick with organization-wide metrics to ensure comparability
+
+## Use cases
+
+- Benchmarks: Select which metrics appear in benchmark comparisons
+- Scorecards: Display a summary of core KPIs
+- Reports: Insert live KPIs or comparisons via blocks (where available)
 

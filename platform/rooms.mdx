@@ -1,6 +1,125 @@
 ---
 title: Rooms
-description: Organize and track projects across units, including budgets and reporting. Coming soon.
+description: Create collaborative spaces to share documents, manage tasks, collect forms, and publish reports with invited members.
 ---
 
-<Warning>Docs coming soon</Warning>
+import DevOnly from "../components/DevOnly";
+
+<DevOnly>[Insert Screenshot of Rooms list]</DevOnly>
+
+## What is a room
+
+Rooms are collaborative spaces where your team and external partners work together. A room combines what used to be called “datarooms,” “projects,” and “workspaces” into a single place for:
+
+- Documents and files
+- Pages built with the Doc Editor
+- Tasks and checklists
+- Forms and submissions
+- Published reports and share links
+
+Rooms live inside an organization. You add members to a room and control what they can see or edit.
+
+## Create a room
+
+<DevOnly>[Insert Screenshot of New Room]</DevOnly>
+
+<Steps>
+  <Step title="Open Rooms">Go to your organization and open **Rooms**.</Step>
+  <Step title="Create room">Click **New room** and enter a name and optional description.</Step>
+  <Step title="Invite members">Add teammates or external partners. Choose their role (view or edit).</Step>
+</Steps>
+
+Tip: You can create a room from common workflows like due diligence, board updates, or vendor onboarding.
+
+## Room structure
+
+Every room follows the same structure so teams always know where to go.
+
+- Overview: Key details, recent activity, and quick links
+- Documents: Files and pages (Doc Editor) organized in folders
+- Tasks: Kanban-style board to track work
+- Forms: Published forms and submissions scoped to the room
+- Reports: Branded, view-only pages you can send and track
+- People: Members, roles, and invitations
+
+<DevOnly>[Insert Screenshot of Room navigation]</DevOnly>
+
+## Documents and pages
+
+Documents include uploaded files and pages created with the Doc Editor.
+
+<Steps>
+  <Step title="Upload or link folders">Use **Documents** to upload files or link an existing organization/unit folder.</Step>
+  <Step title="Create pages">Click **New page** to open the Doc Editor for notes, updates, or templates.</Step>
+  <Step title="Organize">Drag to move files/pages. Use folders to keep things tidy.</Step>
+</Steps>
+
+Permissions inherit from linked folders. See File management for details.
+
+## Tasks
+
+Use the Tasks board to plan and execute work inside the room. Tasks support sections/stages, drag-and-drop, and quick adds.
+
+<DevOnly>[Insert Screenshot of Tasks board]</DevOnly>
+
+<Steps>
+  <Step title="Add stages">Create columns for your workflow (e.g., To do, In progress, Done).</Step>
+  <Step title="Create tasks">Use the inline add field in a column.</Step>
+  <Step title="Reorder">Drag tasks or stages to reprioritize.</Step>
+</Steps>
+
+## Forms
+
+Attach existing forms or create new ones for data collection (e.g., onboarding details, document requests).
+
+<DevOnly>[Insert Screenshot of Room Forms]</DevOnly>
+
+- Publish a form to make it available
+- Members submit once or update if allowed
+- View recent submissions in a side drawer
+
+See Forms for building and publishing forms.
+
+## Reports
+
+Share branded, view-only updates. Reports are pages built with the Doc Editor, emailed to contacts with engagement analytics.
+
+<DevOnly>[Insert Screenshot of Room Reports]</DevOnly>
+
+- Draft in the editor; send to contacts or lists
+- Track delivered, clicked, and viewed
+- Sent reports become read-only for consistency
+
+See Reports to learn sending and analytics. Use Doc Editor for content basics.
+
+## People and access
+
+Manage who can see and edit content in the room.
+
+<Steps>
+  <Step title="Invite members">Open **People** and click **Invite**.</Step>
+  <Step title="Set roles">Choose **Viewer** or **Editor** depending on access needs.</Step>
+  <Step title="Remove access">Revoke access from the People tab at any time.</Step>
+</Steps>
+
+Linked folders inherit permissions from source locations. When in doubt, check the source folder’s sharing settings.
+
+## Payments (coming soon)
+
+Collect payments inside a room for services or requests. Integrations will use Stripe Connect for payouts and item pricing.
+
+<DevOnly>[Insert Screenshot placeholder for Payments]</DevOnly>
+
+## Frequently asked questions
+
+<AccordionGroup>
+  <Accordion title="How is a room different from datarooms/projects?">
+    Rooms merge those concepts into one place with unified navigation for documents, tasks, forms, and reports.
+  </Accordion>
+  <Accordion title="Can external users collaborate?">
+    Yes. Invite them to the room and assign viewer or editor roles.
+  </Accordion>
+  <Accordion title="Can I link existing folders?">
+    Yes. Link organization or unit folders to keep content in sync across rooms.
+  </Accordion>
+</AccordionGroup>

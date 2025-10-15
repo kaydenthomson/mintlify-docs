@@ -1,6 +1,54 @@
 ---
 title: File management
-description: Manage file uploads and exports related to reporting and audits. Coming soon.
+description: Upload, link, and organize files and pages. Control access with folder sharing and use files across Rooms, Pages, and Reports.
 ---
 
-<Warning>Docs coming soon</Warning>
+import DevOnly from "../components/DevOnly";
+
+## Overview
+
+Use Files to manage uploads and pages across your organization, units, and rooms. You can link existing folders, upload new documents, and create pages with the Doc Editor.
+
+<DevOnly>[Insert Screenshot of Files manager]</DevOnly>
+
+## Link or create a folder
+
+You can attach a folder to a Files page or a Room. Linking keeps content in sync with the source location.
+
+<Steps>
+  <Step title="Open Files">From a workspace or room, open the **Files** page.</Step>
+  <Step title="Choose folder">Select **Link existing folder** or **Upload new documents**.</Step>
+  <Step title="Confirm">If linking, pick an organization or unit folder and confirm.</Step>
+</Steps>
+
+Notes:
+
+- Linked folders are read-only at the destination; manage changes at the source.
+- New folders created here inherit room/workspace context and are editable.
+
+## Upload and organize
+
+- Drag and drop to upload
+- Create folders for structure
+- Move, rename, and delete files
+- Create pages (Doc Editor) inside any folder
+
+<DevOnly>[Insert Screenshot of upload area]</DevOnly>
+
+## Permissions and sharing
+
+Folder sharing controls access. Permissions inherit from parent folders.
+
+- Direct file sharing: grant view or edit on a single file
+- Folder inheritance: subfolders and files inherit parent access
+- Linked folder access: governed by the source folder’s sharing
+
+If a collaborator can’t see a file, check the parent folder’s sharing and the room membership.
+
+## Use files in pages and reports
+
+- Insert images, videos, and files directly from the editor
+- Replace placeholders once files are available
+- Unused uploads are automatically cleaned up
+
+See Doc Editor for inserting media and placeholders.

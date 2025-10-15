@@ -11,14 +11,30 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "Operator Guides",
         "groups": [
           {
             "group": "Getting started",
             "pages": ["index", "key-concepts"]
           },
           {
-            "group": "Platform",
+            "group": "Solutions",
+            "pages": [
+              "operators/fundraising",
+              "operators/location-development",
+              "operators/location-roster",
+              "operators/lease-management",
+              "operators/debt-schedules",
+              "operators/stakeholder-updates",
+              "operators/financial-analysis",
+              "operators/monitor-operational-performance",
+              "operators/performance-benchmarking",
+              "operators/scorecards-kpis",
+              "operators/collaboration-knowledge"
+            ]
+          },
+          {
+            "group": "Features",
             "pages": [
               "platform/units",
               "platform/financials",
@@ -45,6 +61,10 @@
             ]
           }
         ]
+      },
+      {
+        "tab": "Brand Guides",
+        "groups": []
       }
     ],
     "global": {

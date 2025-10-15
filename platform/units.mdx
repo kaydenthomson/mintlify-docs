@@ -1,6 +1,41 @@
 ---
 title: Units
-description: Manage your units and configure access, reporting scope, and integrations. Coming soon.
+description: Manage locations/units, connect integrations, and control access. Units power financial reports, benchmarks, and folders shown across Rooms.
 ---
 
-<Warning>Docs coming soon</Warning>
+import DevOnly from "../components/DevOnly";
+
+## Overview
+
+Units represent individual locations or entities in your organization. Connect integrations, manage files, and use unit data in Reports, Benchmarks, and Scorecards.
+
+<DevOnly>[Insert Screenshot of Unit overview]</DevOnly>
+
+## Connect integrations
+
+For the most value, connect QuickBooks, Banking, and POS per unit.
+
+<Steps>
+  <Step title="Open Integrations">Go to **Settings > Integrations**.</Step>
+  <Step title="Connect QuickBooks">Authorize the unit’s QuickBooks company.</Step>
+  <Step title="Optional: Banking/POS">Link banking via Plaid and POS (e.g., Square) to enrich reports.</Step>
+</Steps>
+
+Notes:
+
+- Financial reports work with QuickBooks alone; banking/POS add cash and sales context
+- Monitor sync status in the Financials area
+
+## Files and pages
+
+Each unit can have file folders and Doc Editor pages. Use Files to organize contracts, SOPs, or audits.
+
+<DevOnly>[Insert Screenshot of Unit files]</DevOnly>
+
+## Forms
+
+Publish forms for unit submissions (e.g., onboarding checklists). See Forms for builder details.
+
+## Access
+
+Grant access to specific units for users and organizations. Folder-level sharing inherits to subfolders and files. If users can’t see a file, verify both unit access and folder sharing.

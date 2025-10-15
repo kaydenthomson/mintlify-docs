@@ -1,0 +1,52 @@
+---
+title: Benchmarks
+description: Compare KPIs across units, brands, states, or tags for a selected month. Configure which metrics appear and insert comparisons into pages and reports.
+---
+
+import DevOnly from "../components/DevOnly";
+
+## Overview
+
+Benchmarks let you compare key metrics across your portfolio for a specific period. Configure the set of KPIs once, then insert a Benchmarks block in the Doc Editor to render comparisons.
+
+<DevOnly>[Insert Screenshot of Benchmarks configuration]</DevOnly>
+
+## Configure benchmark items
+
+Select which metrics are included in benchmark comparisons. Only QuickBooks-backed metrics are supported.
+
+<Steps>
+  <Step title="Open settings">Go to **Settings > Benchmarks**.</Step>
+  <Step title="Add KPIs">Choose metrics to include (e.g., Revenue, Gross Margin %, Labor %).</Step>
+  <Step title="Order">Drag to reorder how KPIs appear in the block.</Step>
+</Steps>
+
+Notes:
+
+- Metrics must be QuickBooks-sourced
+- Frequency is monthly; values are looked up by month
+
+## Insert a Benchmarks block
+
+Use the Doc Editor to add a Benchmarks block to a page or report.
+
+<DevOnly>[Insert Screenshot of Benchmarks block settings]</DevOnly>
+
+<Steps>
+  <Step title="Add block">Type “/benchmarks”.</Step>
+  <Step title="Pick period">Select month and year.</Step>
+  <Step title="Group by">Choose Unit, Brand, State, or Tag, then select a target.</Step>
+  <Step title="Sync">Open the settings drawer and click **Sync** to snapshot results.</Step>
+</Steps>
+
+Rendering:
+
+- A compact list or table with KPI labels and values
+- Progress bars for percent metrics
+- Last updated timestamp for visibility
+
+## Data conventions
+
+- Exclude units without data for the selected month from averages
+- Use standardized metrics to avoid name mismatches
+- Bank/POS overlays are planned for future comparisons
